@@ -14,7 +14,7 @@ This plugin for ComfyUI allows you to translate multi-language prompts into Engl
 
 ## Description
 
-This plugin for ComfyUI allows you to translate multi-language prompts into English using the OpenAI API and then encode them with a CLIP model. It provides customization options such as selecting the API URL, setting the OpenAI API key, choosing the translation model, and toggling the translation feature on or off.
+This plugin for ComfyUI allows you to translate multi-language prompts into English using the OpenAI API and then encode them with a CLIP model. It is designed to replace the default `CLIP Text Encode (Prompt)` plugin, allowing users to input prompts in multiple languages and have them translated and encoded for AI-based image generation.
 
 ## Installation and Usage
 
@@ -24,7 +24,7 @@ This plugin for ComfyUI allows you to translate multi-language prompts into Engl
 
 2. **Loading the Plugin**:
    - In the ComfyUI interface, right-click and select `Add Node -> conditioning -> multilanguage prompt`.
-   - The plugin will now be available in your node tree and can replace any previous plugin in your workflow.
+   - This plugin will replace the default `CLIP Text Encode (Prompt)` plugin, allowing you to input prompts in multiple languages.
 
 3. **Configuration**:
    - **API URL**: Defines the API URL, with the default set to OpenAI's API at `https://api.openai.com/v1/chat/completions`.
@@ -35,13 +35,17 @@ This plugin for ComfyUI allows you to translate multi-language prompts into Engl
 ## Usage Instructions in Multiple Languages
 
 ### English:
-To use this plugin, ensure that the `anylanguage.py` file is placed in the `ComfyUI/custom_nodes` directory, and ComfyUI is restarted. After restarting, right-click in the UI, select `Add Node -> conditioning -> multilanguage prompt`, and configure the plugin according to your needs.
+To use this plugin, place the `anylanguage.py` file into the `ComfyUI/custom_nodes` directory, and restart ComfyUI. After restarting, right-click in the UI, select `Add Node -> conditioning -> multilanguage prompt`. This plugin will replace the default `CLIP Text Encode (Prompt)` plugin, allowing you to input prompts in multiple languages and have them translated and encoded for AI-based image generation.
 
 ### 中文:
-使用此插件时，请确保将`anylanguage.py`文件放置在`ComfyUI/custom_nodes`目录中，并重新启动ComfyUI。重启后，在UI中右键单击，选择`Add Node -> conditioning -> multilanguage prompt`，并根据需要配置插件。
+使用此插件时，请将`anylanguage.py`文件放置在`ComfyUI/custom_nodes`目录中，并重新启动ComfyUI。重启后，在UI中右键单击，选择`Add Node -> conditioning -> multilanguage prompt`。此插件将替代默认的`CLIP Text Encode (Prompt)`插件，使您可以输入多语言提示词，并将其翻译和编码用于AI生成图像。
 
 ### 日本語:
-このプラグインを使用するには、`anylanguage.py`ファイルを`ComfyUI/custom_nodes`ディレクトリに配置し、ComfyUIを再起動してください。再起動後、UIで右クリックして、`Add Node -> conditioning -> multilanguage prompt`を選択し、ニーズに合わせてプラグインを設定します。
+このプラグインを使用するには、`anylanguage.py`ファイルを`ComfyUI/custom_nodes`ディレクトリに配置し、ComfyUIを再起動してください。再起動後、UIで右クリックして、`Add Node -> conditioning -> multilanguage prompt`を選択します。このプラグインは、デフォルトの`CLIP Text Encode (Prompt)`プラグインの代わりに使用され、複数の言語でプロンプトを入力して、AIベースの画像生成のために翻訳してエンコードできるようにします。
+
+### 한국어:
+이 플러그인을 사용하려면 `anylanguage.py` 파일을 `ComfyUI/custom_nodes` 디렉토리에 배치하고 ComfyUI를 다시 시작하십시오. 다시 시작한 후 UI에서 마우스 오른쪽 버튼을 클릭하고 `Add Node -> conditioning -> multilanguage prompt`를 선택하십시오. 이 플러그인은 기본 `CLIP Text Encode (Prompt)` 플러그인을 대체하여 여러 언어로 프롬프트를 입력하고 AI 기반 이미지 생성을 위해 번역 및 인코딩할 수 있도록 합니다.
+
 
 ### 한국어:
 이 플러그인을 사용하려면 `anylanguage.py` 파일을 `ComfyUI/custom_nodes` 디렉토리에 배치하고 ComfyUI를 다시 시작하십시오. 다시 시작한 후 UI에서 마우스 오른쪽 버튼을 클릭하고 `Add Node -> conditioning -> multilanguage prompt`를 선택한 다음 필요에 따라 플러그인을 구성하십시오。
