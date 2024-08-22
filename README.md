@@ -49,3 +49,25 @@ To use this plugin, place the `anylanguage.py` file into the `ComfyUI/custom_nod
 
 ### 한국어:
 이 플러그인을 사용하려면 `anylanguage.py` 파일을 `ComfyUI/custom_nodes` 디렉토리에 배치하고 ComfyUI를 다시 시작하십시오. 다시 시작한 후 UI에서 마우스 오른쪽 버튼을 클릭하고 `Add Node -> conditioning -> multilanguage prompt`를 선택한 다음 필요에 따라 플러그인을 구성하십시오。
+
+# ComfyUI & Flux.1 Model Usage Guide
+
+## English
+If you're unsure how to use ComfyUI or the Flux.1 model, please refer to this article first:
+
+[ComfyUI & Flux.1 Model Usage Guide](https://github.com/ArataAI/anylanguage/wiki)
+
+## 日本語
+ComfyUIやFlux.1モデルの使い方がわからない場合は、まずこちらの記事をご覧ください。
+
+[ComfyUI & Flux.1 モデル使用ガイド](https://github.com/ArataAI/anylanguage/wiki)
+
+## 中文
+如果你还不知道如何使用ComfyUI或Flux.1模型，请先参考这篇文章。
+
+[ComfyUI & Flux.1 模型使用指南](https://github.com/ArataAI/anylanguage/wiki)
+
+## 한국어
+ComfyUI나 Flux.1 모델 사용 방법을 잘 모른다면, 먼저 이 기사를 참고하세요.
+
+[ComfyUI & Flux.1 모델 사용 가이드](https://github.com/ArataAI/anylanguage/wiki)
