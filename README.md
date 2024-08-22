@@ -1,6 +1,4 @@
 # ComfyUI Multilanguage Prompt Plugin
-# anylanguage
-
 
 # Demo
 
