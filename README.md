@@ -47,9 +47,6 @@ To use this plugin, place the `anylanguage.py` file into the `ComfyUI/custom_nod
 이 플러그인을 사용하려면 `anylanguage.py` 파일을 `ComfyUI/custom_nodes` 디렉토리에 배치하고 ComfyUI를 다시 시작하십시오. 다시 시작한 후 UI에서 마우스 오른쪽 버튼을 클릭하고 `Add Node -> conditioning -> multilanguage prompt`를 선택하십시오. 이 플러그인은 기본 `CLIP Text Encode (Prompt)` 플러그인을 대체하여 여러 언어로 프롬프트를 입력하고 AI 기반 이미지 생성을 위해 번역 및 인코딩할 수 있도록 합니다.
 
 
-### 한국어:
-이 플러그인을 사용하려면 `anylanguage.py` 파일을 `ComfyUI/custom_nodes` 디렉토리에 배치하고 ComfyUI를 다시 시작하십시오. 다시 시작한 후 UI에서 마우스 오른쪽 버튼을 클릭하고 `Add Node -> conditioning -> multilanguage prompt`를 선택한 다음 필요에 따라 플러그인을 구성하십시오。
-
 # ComfyUI & Flux.1 Model Usage Guide
 
 ## English
