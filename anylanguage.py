@@ -3,6 +3,9 @@ import json
 
 class AnyLanguage:
     """
+    
+    V1.1.0
+    
     By Peng.Bo
     SAHO Inc.
     
@@ -47,14 +50,15 @@ class AnyLanguage:
                 "model": (["gpt-4o-mini", "gpt-4o", "gpt-4-turbo", "gpt-4", "gpt-3.5-turbo"], {
                     "default": "gpt-4o-mini"
                 }),
-                "translate": (["disable", "enable"], {
-                    "default": "enable",
-                    "tooltip": "Enable or disable the translation feature."
-                }),
-                "text": ("STRING", {
+                "multilingual_prompt": ("STRING", {
                     "multiline": True,
                     "dynamicPrompts": True,
-                    "tooltip": "The text to be translated and encoded."
+                    "tooltip": "The multilingual prompt to be translated and encoded (optional)."
+                }),
+                "english_prompt": ("STRING", {
+                    "multiline": True,
+                    "dynamicPrompts": True,
+                    "tooltip": "The English prompt to append to the translated prompt (optional)."
                 }),
                 "clip": ("CLIP", {"tooltip": "The CLIP model used for encoding the translated text."})
             },
@@ -66,23 +70,26 @@ class AnyLanguage:
     CATEGORY = "conditioning"
     DESCRIPTION = "Translates a text prompt using the OpenAI API and encodes it with a CLIP model into an embedding that can be used to guide the diffusion model towards generating specific images."
 
-    def encode(self, api_key, api_url, model, translate, clip, text):
+    def encode(self, api_key, api_url, model, multilingual_prompt, english_prompt, clip):
         """
-        Translates the given prompt to English, then encodes it using the CLIP model.
+        Translates the given multilingual prompt to English, then encodes it using the CLIP model.
 
         Parameters:
         api_key (str): The OpenAI API key provided by the user.
         api_url (str): The API URL provided by the user.
         model (str): The model selected by the user from the dropdown menu.
-        translate (str): The selection to enable or disable translation.
+        multilingual_prompt (str): The multilingual prompt to be translated and encoded (optional).
+        english_prompt (str): The English prompt to append to the translated prompt (optional).
         clip: The CLIP model used to encode the text.
-        text (str): The input prompt to be translated and encoded.
 
         Returns:
         tuple: A tuple containing the conditioning embedding for the translated text.
         """
         try:
-            if translate == "enable":
+            translated_text = ""
+
+            # If the multilingual_prompt has content, perform translation
+            if multilingual_prompt.strip():
                 headers = {
                     "Content-Type": "application/json",
                     "Authorization": f"Bearer {api_key}"
@@ -91,7 +98,7 @@ class AnyLanguage:
                     "model": model,
                     "messages": [
                         {"role": "system", "content": "You are a translation expert. Your task is to accurately and fluently translate the following text into English, ensuring the translation is optimized for use as a prompt in AI-generated image creation. The translation should be natural, precise, and tailored for generating visual content. Do not add any additional comments or notes."},
-                        {"role": "user", "content": text}
+                        {"role": "user", "content": multilingual_prompt}
                     ]
                 }
 
@@ -103,10 +110,18 @@ class AnyLanguage:
                 
                 if not translated_text:
                     raise ValueError("Translation returned an empty result.")
-            else:
-                # If translation is disabled, use the original text
-                translated_text = text
-                
+
+            # If there is english_prompt content, append it to the translated prompt
+            if english_prompt.strip():
+                if translated_text:
+                    translated_text += " " + english_prompt
+                else:
+                    translated_text = english_prompt
+
+            # If neither multilingual_prompt nor english_prompt has content, raise an error
+            if not translated_text:
+                raise ValueError("No valid prompt provided for translation or use.")
+
             print(f"Prompt: {translated_text}")
             tokens = clip.tokenize(translated_text)
             output = clip.encode_from_tokens(tokens, return_pooled=True, return_dict=True)
