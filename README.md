@@ -1,4 +1,6 @@
-# ComfyUI Multilanguage Prompt Plugin
+# ComfyUI Multilanguage Prompt Plugin V1.1.0
+
+![UI](https://raw.githubusercontent.com/ArataAI/anylanguage/master/UI.png)
 
 # Demo
 
@@ -24,27 +26,29 @@ This plugin for ComfyUI allows you to translate multi-language prompts into Engl
 
 2. **Loading the Plugin**:
    - In the ComfyUI interface, right-click and select `Add Node -> conditioning -> multilanguage prompt`.
-   - This plugin will replace the default `CLIP Text Encode (Prompt)` plugin, allowing you to input prompts in multiple languages.
+   - This plugin will replace the default `CLIP Text Encode (Prompt)` plugin, allowing you to input prompts in multiple languages and customize the final prompt used for AI image generation.
 
 3. **Configuration**:
    - **API URL**: Defines the API URL, with the default set to OpenAI's API at `https://api.openai.com/v1/chat/completions`.
    - **API Key**: Set the key obtained from OpenAI. This key is required to use the translation feature. If you don't have a key, you can apply for one at [OpenAI API Keys](https://platform.openai.com/api-keys).
    - **Model**: The default model is `gpt-4o-mini`, which is suitable for most use cases.
-   - **Translate**: Toggle the AI translation feature on or off. If disabled, you must enter the prompt in English in the text box below.
+   - **Multilingual Prompt**: Enter a prompt in any language. If provided, this will be automatically translated into English using the OpenAI API.
+   - **English Prompt**: Enter additional English text to be appended to the translated prompt. This field is optional and allows for precise control over the final prompt content.
 
 ## Usage Instructions in Multiple Languages
 
 ### English:
-To use this plugin, place the `anylanguage.py` file into the `ComfyUI/custom_nodes` directory, and restart ComfyUI. After restarting, right-click in the UI, select `Add Node -> conditioning -> multilanguage prompt`. This plugin will replace the default `CLIP Text Encode (Prompt)` plugin, allowing you to input prompts in multiple languages and have them translated and encoded for AI-based image generation.
+To use this plugin, place the `anylanguage.py` file into the `ComfyUI/custom_nodes` directory, and restart ComfyUI. After restarting, right-click in the UI, select `Add Node -> conditioning -> multilanguage prompt`. This plugin will replace the default `CLIP Text Encode (Prompt)` plugin, allowing you to input prompts in multiple languages and customize the final English prompt for AI-based image generation.
 
 ### 中文:
-使用此插件时，请将`anylanguage.py`文件放置在`ComfyUI/custom_nodes`目录中，并重新启动ComfyUI。重启后，在UI中右键单击，选择`Add Node -> conditioning -> multilanguage prompt`。此插件将替代默认的`CLIP Text Encode (Prompt)`插件，使您可以输入多语言提示词，并将其翻译和编码用于AI生成图像。
+使用此插件时，请将`anylanguage.py`文件放置在`ComfyUI/custom_nodes`目录中，并重新启动ComfyUI。重启后，在UI中右键单击，选择`Add Node -> conditioning -> multilanguage prompt`。此插件将替代默认的`CLIP Text Encode (Prompt)`插件，使您可以输入多语言提示词，并通过附加英文文本来自定义最终的提示词，用于AI生成图像。
 
 ### 日本語:
-このプラグインを使用するには、`anylanguage.py`ファイルを`ComfyUI/custom_nodes`ディレクトリに配置し、ComfyUIを再起動してください。再起動後、UIで右クリックして、`Add Node -> conditioning -> multilanguage prompt`を選択します。このプラグインは、デフォルトの`CLIP Text Encode (Prompt)`プラグインの代わりに使用され、複数の言語でプロンプトを入力して、AIベースの画像生成のために翻訳してエンコードできるようにします。
+このプラグインを使用するには、`anylanguage.py`ファイルを`ComfyUI/custom_nodes`ディレクトリに配置し、ComfyUIを再起動してください。再起動後、UIで右クリックして、`Add Node -> conditioning -> multilanguage prompt`を選択します。このプラグインは、デフォルトの`CLIP Text Encode (Prompt)`プラグインの代わりに使用され、複数の言語でプロンプトを入力し、追加の英語テキストを使用して最終的なプロンプトをカスタマイズして、AIベースの画像生成に使用できます。
 
 ### 한국어:
-이 플러그인을 사용하려면 `anylanguage.py` 파일을 `ComfyUI/custom_nodes` 디렉토리에 배치하고 ComfyUI를 다시 시작하십시오. 다시 시작한 후 UI에서 마우스 오른쪽 버튼을 클릭하고 `Add Node -> conditioning -> multilanguage prompt`를 선택하십시오. 이 플러그인은 기본 `CLIP Text Encode (Prompt)` 플러그인을 대체하여 여러 언어로 프롬프트를 입력하고 AI 기반 이미지 생성을 위해 번역 및 인코딩할 수 있도록 합니다.
+이 플러그인을 사용하려면 `anylanguage.py` 파일을 `ComfyUI/custom_nodes` 디렉토리에 배치하고 ComfyUI를 다시 시작하십시오. 다시 시작한 후 UI에서 마우스 오른쪽 버튼을 클릭하고 `Add Node -> conditioning -> multilanguage prompt`를 선택하십시오. 이 플러그인은 기본 `CLIP Text Encode (Prompt)` 플러그인을 대체하여 여러 언어로 프롬프트를 입력하고 추가 영어 텍스트를 통해 최종 프롬프트를 맞춤화하여 AI 기반 이미지 생성을 위해 사용할 수 있습니다。
+
 
 
 # ComfyUI & Flux.1 Model Usage Guide
