@@ -6,13 +6,13 @@
 
 ![Demo Video](https://raw.githubusercontent.com/ArataAI/anylanguage/master/demo.gif)
 
-This plugin for ComfyUI allows you to translate multi-language prompts into English using the OpenAI API and then encode them with a CLIP model. It integrates seamlessly into ComfyUI, enabling users to generate AI-based image content with translated prompts. The plugin offers customization options such as selecting the API URL, setting the OpenAI API key, choosing the translation model, and toggling the translation feature on or off.
+This ComfyUI plugin translates non-English prompts into English using the OpenAI API and then combines the translated text with an additional English prompt for AI image generation. Users can input prompts in any language, and the final prompt used will be the translated text plus any provided English prompt.
 
-这个ComfyUI插件可以使用OpenAI API将多语言提示词翻译成英文，并使用CLIP模型对其进行编码。插件无缝集成到ComfyUI中，允许用户使用翻译后的提示词生成基于AI的图像内容。插件提供了多种自定义选项，例如选择API URL、设置OpenAI API密钥、选择翻译模型，以及打开或关闭翻译功能。
+这个ComfyUI插件将非英语提示词使用OpenAI API翻译成英文，并将其与额外的英文提示词结合，用于AI图像生成。用户可以输入任何语言的提示词，最终用于生成的提示词将是翻译后的文本加上附加的英文提示词。
 
-このComfyUIプラグインは、OpenAI APIを使用して多言語のプロンプトを英語に翻訳し、CLIPモデルでエンコードする機能を提供します。このプラグインはComfyUIにシームレスに統合され、ユーザーが翻訳されたプロンプトを使用してAIベースの画像コンテンツを生成できるようにします。API URLの選択、OpenAI APIキーの設定、翻訳モデルの選択、翻訳機能のオン/オフの切り替えなどのカスタマイズオプションも提供しています。
+このComfyUIプラグインは、非英語のプロンプトをOpenAI APIで英語に翻訳し、その翻訳されたテキストに追加の英語プロンプトを組み合わせてAI画像生成に使用します。ユーザーは任意の言語でプロンプトを入力でき、最終的に使用されるプロンプトは、翻訳されたテキストと提供された英語プロンプトを組み合わせたものになります。
 
-이 ComfyUI 플러그인은 OpenAI API를 사용하여 여러 언어의 프롬프트를 영어로 번역하고 CLIP 모델로 인코딩하는 기능을 제공합니다. 이 플러그인은 ComfyUI에 원활하게 통합되어, 사용자가 번역된 프롬프트를 사용하여 AI 기반 이미지 콘텐츠를 생성할 수 있도록 합니다. API URL 선택, OpenAI API 키 설정, 번역 모델 선택 및 번역 기능 활성화 또는 비활성화 등의 사용자 정의 옵션을 제공합니다.
+이 ComfyUI 플러그인은 비영어 프롬프트를 OpenAI API로 영어로 번역한 다음, 번역된 텍스트에 추가적인 영어 프롬프트를 결합하여 AI 이미지 생성을 위한 프롬프트로 사용합니다. 사용자는 어떤 언어로든 프롬프트를 입력할 수 있으며, 최종적으로 사용되는 프롬프트는 번역된 텍스트와 제공된 영어 프롬프트를 결합한 것입니다.
 
 ## Description
 
