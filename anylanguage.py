@@ -47,7 +47,7 @@ class AnyLanguage:
                     "placeholder": "Enter your OpenAI API Key here",
                     "lazy": False
                 }),
-                "model": (["gpt-4o-mini", "gpt-4o", "gpt-4-turbo", "gpt-4", "gpt-3.5-turbo"], {
+                "model": (["gpt-4o-mini", "gpt-4o", "o1-mini", "o1-preview", "chatgpt-4o-latest", "gpt-4-turbo", "gpt-4", "gpt-3.5-turbo"], {
                     "default": "gpt-4o-mini"
                 }),
                 "multilingual_prompt": ("STRING", {
