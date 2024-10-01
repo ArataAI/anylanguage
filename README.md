@@ -1,4 +1,4 @@
-# ComfyUI Multilanguage Prompt Plugin V1.1.0
+# ComfyUI Multilanguage Prompt Plugin V1.1.8
 
 ![UI](https://raw.githubusercontent.com/ArataAI/anylanguage/master/UI.png)
 
